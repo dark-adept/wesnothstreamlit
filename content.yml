@@ -1,0 +1,208 @@
+navigator:
+  English: "Select a page"
+  Italiano: "Sceglia una pagina"
+  Deutsch: "Wählen Sie eine Seite"
+translate:
+  English: "Choose a language"
+  Italiano: "Sceglia una lingua"
+  Deutsch: "Wählen Sie eine Sprache"
+homepage:
+  English:
+    name: "Homepage"
+    title: "Wesnoth Replay Parser 📽️"
+    sidebar-title: "## Replay"
+    replay: "Upload a replay here"
+  Italiano: 
+    name: "Pagina Iniziale"
+    title: "Analizzatore di Replay di Wesnoth 📽️"
+    sidebar-title: "## Replay"
+    replay: "Carica un replay qui"
+  Deutsch:
+    name: "Startseite"
+    title: "Wesnoth Replay-Parser 📽️"
+    sidebar-title: "## Replay"
+    replay: "Laden Sie hier einen Replay hoch"
+  
+turns:
+  English:
+    name: "Turns"
+    title: "Turn Summary"
+    sidebar-title: "## Filters"
+    sidebar-filter1-text: "Turn"
+    sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter2-text: "Player"
+    sidebar-filter2-options: {"1":"1","2":"2","both":"Both"}
+  Italiano:
+    name: "Turni"
+    title: "Riassunto dei Turni"
+    sidebar-title: "## Filtri"
+    sidebar-filter1-text: "Turno"
+    sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter2-text: "Giocatore"
+    sidebar-filter2-options: {"1":"1","2":"2","both":"Tutti Due"}
+  Deutsch:
+    name: "Zuges"
+    title: "Zusammenfassung des Zuges"
+    sidebar-title: "## Filter"
+    sidebar-filter1-text: "Zug"
+    sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter2-text: "Spieler"
+    sidebar-filter2-options: {"1":"1","2":"2","both":"Beide"}
+  
+actions:
+  English:
+    name: "Actions"
+    title: "Actions"
+    sidebar-title: "## Filters"
+    sidebar-filter1-text: "Turn"
+    sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter2-text: "Player"
+    sidebar-filter2-options: {"1":"1","2":"2","both":"Both"}
+    sidebar-filter3-text: "Action"
+    sidebar-filter3-options: {"recruit":"Recruit","attack":"Attack","move":"Move","level":"Level","resurrect":"Resurrect","all":"All"}
+    sidebar-filter4-text: "Phantom"
+  Italiano:
+    name: "Azioni"
+    title: "Azioni"
+    sidebar-title: "## Filtri"
+    sidebar-filter1-text: "Turno"
+    sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter2-text: "Giocatore"
+    sidebar-filter2-options: {"1":"1","2":"2","both":"Tutti Due"}
+    sidebar-filter3-text: "Azione"
+    sidebar-filter3-options: {"recruit":"Reclutare","attack":"Attaccare","move":"Muovere","level":"Livellare","resurrect":"Resuscitare","all":"Tutti"}
+    sidebar-filter4-text: "Fantasma"
+  Deutsch:
+    name: "Azioni"
+    title: "Azioni"
+    sidebar-title: "## Filter"
+    sidebar-filter1-text: "Zug"
+    sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter2-text: "Spieler"
+    sidebar-filter2-options: {"1":"1","2":"2","both":"Beide"}
+    sidebar-filter3-text: "Aktion"
+    sidebar-filter3-options: {"recruit":"Rekrutieren","attack":"Attackieren","move":"Bewegung","level":"Aufleveln","resurrect":"Wiederbeleben","all":"Alle"}
+    sidebar-filter4-text: "Phantom"
+
+metadata:
+  English:
+    name: "Metadata"
+    title: "Metadata"
+    section1-title: ""
+    section1-text: ""
+  Italiano:
+    name: "Metadata"
+    title: "Metadata"
+    section1-title: ""
+    section1-text: ""
+  Deutsch:
+    name: "Metadata"
+    title: "Metadata"
+    section1-title: ""
+    section1-text: ""
+
+flags:
+  English:
+    name: "Flags"
+    title: "Flags"
+    correct:
+      long_enough: "There must be more than 4 total turns (2 per player)."
+      two_players: "There must be exactly 2 players in a ladder match."
+      correct_leader_side: "For every recruitment, the leader recruiting must be on the same side as the recruitee."
+      correct_leader_location: "For every recruitment, the given location of the leader must be correct."
+      no_phantom_unit: "For every movement, there must be a unit already in the starting location to be moved."
+      correct_turn_count: "The total number of turns given by the turn summary must be the same as the number of turns calculated from the actions data."
+      only_one_phantom: "For all but one movement, there must be a unit already in the starting location to be moved."
+      attack_correct_locations: "For every attack, there is a unit designated in the attacking and defending positions."
+      attack_correct_units: "For every attack, the names of the attacker and defender line up with the unit names designated in the attacking and defending positions."
+      known_weapons: "For every attack, it is possible to figure out which weapons were used."
+      weapon_mismatch: "For every attack, if the defender was able to respond, they fought back"
+      attacks_exhausted: "For every attack, both attacker and defender attempting all possible hits unless one of them died."
+    incorrect:
+      long_enough: "The available data inside the replay is too short (less than 5 turns total)."
+      two_players: "There are either too many or too few players inside this replay."
+      correct_leader_side: "There is an issue where the leader for one player is recruiting during the turn of the other"
+      correct_leader_location: "There is an error where a non-leader is recruiting a unit."
+      no_phantom_unit: "There is an issue where a movement command has been issued from a location that did not have a unit originally."
+      only_one_phantom: "There are more than one movement commands issued from a location that did not have a unit originally."
+      correct_turn_count: "The count of turns given by the turn data does not agree with the turn count from the action data."
+      attack_correct_locations: "There is a combat where the positions of the units (attacker or defender) do not agree with the given data."
+      attack_correct_units: "There is a combat where the name of a unit (attacker or defender) does not line up with the data for that combat."
+      known_weapons: "There is a combat where it is impossible to deduce the weapon used by the defender."
+      weapon_mismatch: "There is a combat where the defender could have retaliated but did not."
+      attacks_exhausted: "There is a combat where a unit (attacker or defender) could have continued to hit but did not."
+  Italiano:
+    name: "Errori"
+    title: "Errori"
+    correct:
+      long_enough: "There must be more than 4 total turns (2 per player)."
+      two_players: "There must be exactly 2 players in a ladder match."
+      correct_leader_side: "For every recruitment, the leader recruiting must be on the same side as the recruitee."
+      correct_leader_location: "For every recruitment, the given location of the leader must be correct."
+      no_phantom_unit: "For every movement, there must be a unit already in the starting location to be moved."
+      correct_turn_count: "The total number of turns given by the turn summary must be the same as the number of turns calculated from the actions data."
+      only_one_phantom: "For all but one movement, there must be a unit already in the starting location to be moved."
+      attack_correct_locations: "For every attack, there is a unit designated in the attacking and defending positions."
+      attack_correct_units: "For every attack, the names of the attacker and defender line up with the unit names designated in the attacking and defending positions."
+      known_weapons: "For every attack, it is possible to figure out which weapons were used."
+      weapon_mismatch: "For every attack, if the defender was able to respond, they fought back"
+      attacks_exhausted: "For every attack, both attacker and defender attempting all possible hits unless one of them died."
+    incorrect:
+      long_enough: "The available data inside the replay is too short (less than 5 turns total)."
+      two_players: "There are either too many or too few players inside this replay."
+      correct_leader_side: "There is an issue where the leader for one player is recruiting during the turn of the other"
+      correct_leader_location: "There is an error where a non-leader is recruiting a unit."
+      no_phantom_unit: "There is an issue where a movement command has been issued from a location that did not have a unit originally."
+      only_one_phantom: "There are more than one movement commands issued from a location that did not have a unit originally."
+      correct_turn_count: "The count of turns given by the turn data does not agree with the turn count from the action data."
+      attack_correct_locations: "There is a combat where the positions of the units (attacker or defender) do not agree with the given data."
+      attack_correct_units: "There is a combat where the name of a unit (attacker or defender) does not line up with the data for that combat."
+      known_weapons: "There is a combat where it is impossible to deduce the weapon used by the defender."
+      weapon_mismatch: "There is a combat where the defender could have retaliated but did not."
+      attacks_exhausted: "There is a combat where a unit (attacker or defender) could have continued to hit but did not."
+  Deutsch:
+    name: "Flags"
+    title: "Flags"
+    correct:
+      long_enough: "There must be more than 4 total turns (2 per player)."
+      two_players: "There must be exactly 2 players in a ladder match."
+      correct_leader_side: "For every recruitment, the leader recruiting must be on the same side as the recruitee."
+      correct_leader_location: "For every recruitment, the given location of the leader must be correct."
+      no_phantom_unit: "For every movement, there must be a unit already in the starting location to be moved."
+      correct_turn_count: "The total number of turns given by the turn summary must be the same as the number of turns calculated from the actions data."
+      only_one_phantom: "For all but one movement, there must be a unit already in the starting location to be moved."
+      attack_correct_locations: "For every attack, there is a unit designated in the attacking and defending positions."
+      attack_correct_units: "For every attack, the names of the attacker and defender line up with the unit names designated in the attacking and defending positions."
+      known_weapons: "For every attack, it is possible to figure out which weapons were used."
+      weapon_mismatch: "For every attack, if the defender was able to respond, they fought back"
+      attacks_exhausted: "For every attack, both attacker and defender attempting all possible hits unless one of them died."
+    incorrect:
+      long_enough: "The available data inside the replay is too short (less than 5 turns total)."
+      two_players: "There are either too many or too few players inside this replay."
+      correct_leader_side: "There is an issue where the leader for one player is recruiting during the turn of the other"
+      correct_leader_location: "There is an error where a non-leader is recruiting a unit."
+      no_phantom_unit: "There is an issue where a movement command has been issued from a location that did not have a unit originally."
+      only_one_phantom: "There are more than one movement commands issued from a location that did not have a unit originally."
+      correct_turn_count: "The count of turns given by the turn data does not agree with the turn count from the action data."
+      attack_correct_locations: "There is a combat where the positions of the units (attacker or defender) do not agree with the given data."
+      attack_correct_units: "There is a combat where the name of a unit (attacker or defender) does not line up with the data for that combat."
+      known_weapons: "There is a combat where it is impossible to deduce the weapon used by the defender."
+      weapon_mismatch: "There is a combat where the defender could have retaliated but did not."
+      attacks_exhausted: "There is a combat where a unit (attacker or defender) could have continued to hit but did not."
+
+bugs:
+  English:
+    name: "Bugs"
+    title: "Bugs"
+    section1-title: ""
+    section1-text: ""
+  Italiano:
+    name: "Bugs"
+    title: "Bugs"
+    section1-title: ""
+    section1-text: ""
+  Deutsch:
+    name: "Bugs"
+    title: "Bugs"
+    section1-title: ""
+    section1-text: ""
