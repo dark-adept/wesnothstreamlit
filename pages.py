@@ -57,9 +57,9 @@ class Home(Page):
         translation = self.content[lang]
         st.markdown("<h1 style='text-align: center;'>" + translation["title"] + "</h1>", unsafe_allow_html=True)
         st1,st2,st3 = st.columns(3)
-        st1.image("appdata/DarkAdept.PNG")
-        st2.image("appdata/WalkingCorpse.PNG")
-        st3.image("appdata/DragonGuard.PNG")
+        st1.image("appdata/DarkAdept.png")
+        st2.image("appdata/WalkingCorpse.png")
+        st3.image("appdata/DragonGuard.png")
 
 
         st.write("-"*50)
