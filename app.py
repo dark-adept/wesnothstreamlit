@@ -22,7 +22,7 @@ if "filter1" not in st.session_state:
     st.session_state["filter4"] = False
 
 
-st.write("This is a SECRETS test:", st.secrets["SECRET"])
+
 
 # @st.cache
 def load_content():
@@ -34,7 +34,7 @@ def load_content():
 content = load_content()
 
 
-st.set_page_config(layout='wide') 
+# st.set_page_config(layout='wide') 
 
 
 languages = ["English","Italiano","Deutsch"]

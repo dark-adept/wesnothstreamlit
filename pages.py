@@ -61,7 +61,7 @@ class Home(Page):
         st2.image("appdata/WalkingCorpse.png")
         st3.image("appdata/DragonGuard.png")
 
-
+        st.write("This is a SECRETS test:", st.secrets["SECRET"])
         st.write("-"*50)
 
         if "sidebar-title" in translation:
