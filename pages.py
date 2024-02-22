@@ -61,7 +61,7 @@ class Home(Page):
         st2.image("appdata/WalkingCorpse.png")
         st3.image("appdata/DragonGuard.png")
 
-        st.write("This is a SECRETS test:", st.secrets["SECRET"])
+        # st.write("This is a SECRETS test:", st.secrets["SECRET"])
         st.write("-"*50)
 
         if "sidebar-title" in translation:
@@ -126,9 +126,9 @@ class Metadata(Page):
         metadata = st.session_state["replay_data"]["meta"]
 
 
-        st.markdown("<h1 style='text-align: center;font-size:24px;'>" + f'VERSION - {metadata["version"]}' + "</h1>", unsafe_allow_html=True)    
+        st.markdown("<h1 style='text-align: center;font-size:24px;'>" + f'{translation["subtitle1"]} - {metadata["version"]}' + "</h1>", unsafe_allow_html=True)    
 
-        st.markdown("<h1 style='text-align: center;font-size:18px;'>" + f'MAP - {metadata["map"]}' + "</h1>", unsafe_allow_html=True)    
+        st.markdown("<h1 style='text-align: center;font-size:18px;'>" + f'{translation["subtitle2"]} - {metadata["map"]}' + "</h1>", unsafe_allow_html=True)    
 
         st.write("-"*50)
 
@@ -136,10 +136,10 @@ class Metadata(Page):
 
         for i,col in enumerate(sts, start=1):
             cur_player = metadata["players"][i]
-            col.markdown("<h1 style='text-align: center;font-size:18px;'>" + f'PLAYER {i}' + "</h1>", unsafe_allow_html=True)
-            col.markdown("<h1 style='font-size:12px;'>" + f'Name:    {cur_player["player"]}' + "</h1>", unsafe_allow_html=True) 
-            col.markdown("<h1 style='font-size:12px;'>" + f'Faction: {cur_player["faction"]}' + "</h1>", unsafe_allow_html=True) 
-            col.markdown("<h1 style='font-size:12px;'>" + f'Leader:  {cur_player["leader"]}' + "</h1>", unsafe_allow_html=True)  
+            col.markdown("<h1 style='text-align: center;font-size:18px;'>" + f'{translation["subtitle3"]} {i}' + "</h1>", unsafe_allow_html=True)
+            col.markdown("<h1 style='font-size:12px;'>" + f'{translation["section3-text1"]}:    {cur_player["player"]}' + "</h1>", unsafe_allow_html=True) 
+            col.markdown("<h1 style='font-size:12px;'>" + f'{translation["section3-text2"]}: {cur_player["faction"]}' + "</h1>", unsafe_allow_html=True) 
+            col.markdown("<h1 style='font-size:12px;'>" + f'{translation["section3-text3"]}:  {cur_player["leader"]}' + "</h1>", unsafe_allow_html=True)  
 
 
 
@@ -177,7 +177,7 @@ class Turns(Page):
         st.table(visible_df)
 
         st.download_button(
-        "Press to Download",
+        translation["download"],
         df.to_csv(index=False).encode('utf-8'),
         f'{st.session_state["replay_name"]}_turns.csv',
         "text/csv",
@@ -233,7 +233,7 @@ class Actions(Page):
 
 
         st.download_button(
-        "Press to Download",
+        translation["download"],
         df.to_csv(index=False).encode('utf-8'),
         f'{st.session_state["replay_name"]}_actions.csv',
         "text/csv",

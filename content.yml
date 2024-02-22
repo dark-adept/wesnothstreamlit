@@ -6,6 +6,7 @@ translate:
   English: "Choose a language"
   Italiano: "Sceglia una lingua"
   Deutsch: "Wählen Sie eine Sprache"
+
 homepage:
   English:
     name: "Homepage"
@@ -22,11 +23,41 @@ homepage:
     title: "Wesnoth Replay-Parser 📽️"
     sidebar-title: "## Replay"
     replay: "Laden Sie hier einen Replay hoch"
-  
+
+metadata:
+  English:
+    name: "Metadata"
+    title: "Metadata"
+    subtitle1: "Version"
+    subtitle2: "Map"
+    subtitle3: "Player"
+    section3-text1: "Name"
+    section3-text2: "Faction"
+    section3-text3: "Leader"
+  Italiano:
+    name: "Metadata"
+    title: "Metadata"
+    subtitle1: "Versione"
+    subtitle2: "Mappa"
+    subtitle3: "Giocatore"
+    section3-text1: "Nome"
+    section3-text2: "Fazione"
+    section3-text3: "Capo"
+  Deutsch:
+    name: "Metadata"
+    title: "Metadata"
+    subtitle1: "Version"
+    subtitle2: "Karte"
+    subtitle3: "Spieler"
+    section3-text1: "Name"
+    section3-text2: "Fraktion"
+    section3-text3: "Leiter"
+
 turns:
   English:
     name: "Turns"
     title: "Turn Summary"
+    download: "Download"
     sidebar-title: "## Filters"
     sidebar-filter1-text: "Turn"
     sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
@@ -35,6 +66,7 @@ turns:
   Italiano:
     name: "Turni"
     title: "Riassunto dei Turni"
+    download: "Scaricare"
     sidebar-title: "## Filtri"
     sidebar-filter1-text: "Turno"
     sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
@@ -43,6 +75,7 @@ turns:
   Deutsch:
     name: "Zuges"
     title: "Zusammenfassung des Zuges"
+    download: "Herunterladen"
     sidebar-title: "## Filter"
     sidebar-filter1-text: "Zug"
     sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
@@ -53,6 +86,7 @@ actions:
   English:
     name: "Actions"
     title: "Actions"
+    download: "Download"
     sidebar-title: "## Filters"
     sidebar-filter1-text: "Turn"
     sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
@@ -64,6 +98,7 @@ actions:
   Italiano:
     name: "Azioni"
     title: "Azioni"
+    download: "Scaricare"
     sidebar-title: "## Filtri"
     sidebar-filter1-text: "Turno"
     sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
@@ -75,6 +110,7 @@ actions:
   Deutsch:
     name: "Azioni"
     title: "Azioni"
+    download: "Herunterladen"
     sidebar-title: "## Filter"
     sidebar-filter1-text: "Zug"
     sidebar-filter1-options: {"1":"1","2":"2","both":"Beide"}
@@ -83,23 +119,6 @@ actions:
     sidebar-filter3-text: "Aktion"
     sidebar-filter3-options: {"recruit":"Rekrutieren","attack":"Attackieren","move":"Bewegung","level":"Aufleveln","resurrect":"Wiederbeleben","all":"Alle"}
     sidebar-filter4-text: "Phantom"
-
-metadata:
-  English:
-    name: "Metadata"
-    title: "Metadata"
-    section1-title: ""
-    section1-text: ""
-  Italiano:
-    name: "Metadata"
-    title: "Metadata"
-    section1-title: ""
-    section1-text: ""
-  Deutsch:
-    name: "Metadata"
-    title: "Metadata"
-    section1-title: ""
-    section1-text: ""
 
 flags:
   English:
@@ -135,60 +154,60 @@ flags:
     name: "Errori"
     title: "Errori"
     correct:
-      long_enough: "There must be more than 4 total turns (2 per player)."
-      two_players: "There must be exactly 2 players in a ladder match."
-      correct_leader_side: "For every recruitment, the leader recruiting must be on the same side as the recruitee."
-      correct_leader_location: "For every recruitment, the given location of the leader must be correct."
-      no_phantom_unit: "For every movement, there must be a unit already in the starting location to be moved."
-      correct_turn_count: "The total number of turns given by the turn summary must be the same as the number of turns calculated from the actions data."
-      only_one_phantom: "For all but one movement, there must be a unit already in the starting location to be moved."
-      attack_correct_locations: "For every attack, there is a unit designated in the attacking and defending positions."
-      attack_correct_units: "For every attack, the names of the attacker and defender line up with the unit names designated in the attacking and defending positions."
-      known_weapons: "For every attack, it is possible to figure out which weapons were used."
-      weapon_mismatch: "For every attack, if the defender was able to respond, they fought back"
-      attacks_exhausted: "For every attack, both attacker and defender attempting all possible hits unless one of them died."
+      long_enough: "Deve esserci più di 4 turni totali (2 per giocatore)."
+      two_players: "Nella partita competitiva deve esserci esattamente 2 giocatori."
+      correct_leader_side: "Per ogni reclutamento, il leader che recluta deve essere dalla stessa parte del reclutato."
+      correct_leader_location: "Per ogni reclutamento, la posizione indicata del leader deve essere corretta."
+      no_phantom_unit: "Per ogni movimento, deve esserci già un'unità nella posizione di partenza da spostare."
+      correct_turn_count: "Il numero totale di turni forniti dal riassunto dei turni deve essere lo stesso del numero di turni calcolato dai dati delle azioni."
+      only_one_phantom: "Per tutti i movimenti tranne uno, deve esserci già un'unità nella posizione di partenza da spostare."
+      attack_correct_locations: "Per ogni attacco, c'è un'unità designata nelle posizioni di attacco e difesa."
+      attack_correct_units: "Per ogni attacco, i nomi dell'attaccante e del difensore corrispondono ai nomi delle unità designate nelle posizioni di attacco e difesa."
+      known_weapons: "Per ogni attacco, è possibile capire quali armi sono state utilizzate."
+      weapon_mismatch: "Per ogni attacco, se il difensore è stato in grado di rispondere, ha contrattaccato."
+      attacks_exhausted: "Per ogni attacco, sia l'attaccante che il difensore cercano tutti i possibili colpi a meno che uno di loro non muoia."
     incorrect:
-      long_enough: "The available data inside the replay is too short (less than 5 turns total)."
-      two_players: "There are either too many or too few players inside this replay."
-      correct_leader_side: "There is an issue where the leader for one player is recruiting during the turn of the other"
-      correct_leader_location: "There is an error where a non-leader is recruiting a unit."
-      no_phantom_unit: "There is an issue where a movement command has been issued from a location that did not have a unit originally."
-      only_one_phantom: "There are more than one movement commands issued from a location that did not have a unit originally."
-      correct_turn_count: "The count of turns given by the turn data does not agree with the turn count from the action data."
-      attack_correct_locations: "There is a combat where the positions of the units (attacker or defender) do not agree with the given data."
-      attack_correct_units: "There is a combat where the name of a unit (attacker or defender) does not line up with the data for that combat."
-      known_weapons: "There is a combat where it is impossible to deduce the weapon used by the defender."
-      weapon_mismatch: "There is a combat where the defender could have retaliated but did not."
-      attacks_exhausted: "There is a combat where a unit (attacker or defender) could have continued to hit but did not."
+      long_enough: "I dati disponibili nel replay sono troppo brevi (meno di 5 turni in totale)."
+      two_players: "Nel replay ci sono troppi o troppo pochi giocatori."
+      correct_leader_side: "C'è un problema dove il leader di un giocatore sta reclutando durante il turno dell'altro."
+      correct_leader_location: "C'è un errore dove un non-leader sta reclutando un'unità."
+      no_phantom_unit: "C'è un problema in cui è stato emesso un comando di movimento da una posizione che originariamente non aveva un'unità."
+      only_one_phantom: "Sono stati emessi più comandi di movimento da una posizione che originariamente non aveva un'unità."
+      correct_turn_count: "La quantità di turni fornita dai dati di turno non coincide con il conteggio dei turni dai dati delle azioni."
+      attack_correct_locations: "C'è un combattimento in cui le posizioni delle unità (attaccante o difensore) non sono in accordo con i dati forniti."
+      attack_correct_units: "C'è un combattimento in cui il nome di un'unità (attaccante o difensore) non corrisponde ai dati per quel combattimento."
+      known_weapons: "C'è un combattimento in cui è impossibile dedurre l'arma usata dal difensore."
+      weapon_mismatch: "C'è un combattimento in cui il difensore avrebbe potuto contrattaccare ma non l'ha fatto."
+      attacks_exhausted: "C'è un combattimento in cui un'unità (attaccante o difensore) avrebbe potuto continuare a colpire ma non lo ha fatto."
   Deutsch:
     name: "Flags"
     title: "Flags"
     correct:
-      long_enough: "There must be more than 4 total turns (2 per player)."
-      two_players: "There must be exactly 2 players in a ladder match."
-      correct_leader_side: "For every recruitment, the leader recruiting must be on the same side as the recruitee."
-      correct_leader_location: "For every recruitment, the given location of the leader must be correct."
-      no_phantom_unit: "For every movement, there must be a unit already in the starting location to be moved."
-      correct_turn_count: "The total number of turns given by the turn summary must be the same as the number of turns calculated from the actions data."
-      only_one_phantom: "For all but one movement, there must be a unit already in the starting location to be moved."
-      attack_correct_locations: "For every attack, there is a unit designated in the attacking and defending positions."
-      attack_correct_units: "For every attack, the names of the attacker and defender line up with the unit names designated in the attacking and defending positions."
-      known_weapons: "For every attack, it is possible to figure out which weapons were used."
-      weapon_mismatch: "For every attack, if the defender was able to respond, they fought back"
-      attacks_exhausted: "For every attack, both attacker and defender attempting all possible hits unless one of them died."
+      long_enough: "Es müssen mehr als 4 Gesamtzüge (2 pro Spieler) sein."
+      two_players: "In einem Leitermatch müssen genau 2 Spieler sein."
+      correct_leader_side: "Für jede Rekrutierung muss der rekrutierende Anführer auf derselben Seite wie der Rekrutierte sein."
+      correct_leader_location: "Für jede Rekrutierung muss der angegebene Standort des Anführers korrekt sein."
+      no_phantom_unit: "Für jede Bewegung muss sich bereits eine Einheit am Startort befinden, die bewegt werden soll."
+      correct_turn_count: "Die Gesamtzahl der Runden, die vom Runden-Summary angegeben werden, muss mit der Anzahl der aus den Aktionsdaten berechneten Runden übereinstimmen."
+      only_one_phantom: "Für alle außer einer Bewegung muss sich bereits eine Einheit am Startort befinden, die bewegt werden soll."
+      attack_correct_locations: "Für jeden Angriff ist eine Einheit in den angreifenden und verteidigenden Positionen vorgesehen."
+      attack_correct_units: "Für jeden Angriff entsprechen die Namen des Angreifers und des Verteidigers den Namen der Einheiten, die in den angreifenden und verteidigenden Positionen vorgesehen sind."
+      known_weapons: "Für jeden Angriff ist es möglich herauszufinden, welche Waffen verwendet wurden."
+      weapon_mismatch: "Für jeden Angriff hat der Verteidiger zurückgekämpft, wenn er in der Lage war zu antworten."
+      attacks_exhausted: "Für jeden Angriff versuchen sowohl Angreifer als auch Verteidiger alle möglichen Treffer, es sei denn, einer von ihnen stirbt."
     incorrect:
-      long_enough: "The available data inside the replay is too short (less than 5 turns total)."
-      two_players: "There are either too many or too few players inside this replay."
-      correct_leader_side: "There is an issue where the leader for one player is recruiting during the turn of the other"
-      correct_leader_location: "There is an error where a non-leader is recruiting a unit."
-      no_phantom_unit: "There is an issue where a movement command has been issued from a location that did not have a unit originally."
-      only_one_phantom: "There are more than one movement commands issued from a location that did not have a unit originally."
-      correct_turn_count: "The count of turns given by the turn data does not agree with the turn count from the action data."
-      attack_correct_locations: "There is a combat where the positions of the units (attacker or defender) do not agree with the given data."
-      attack_correct_units: "There is a combat where the name of a unit (attacker or defender) does not line up with the data for that combat."
-      known_weapons: "There is a combat where it is impossible to deduce the weapon used by the defender."
-      weapon_mismatch: "There is a combat where the defender could have retaliated but did not."
-      attacks_exhausted: "There is a combat where a unit (attacker or defender) could have continued to hit but did not."
+      long_enough: "Die verfügbaren Daten im Replay sind zu kurz (weniger als 5 Gesamtzüge)."
+      two_players: "Es sind entweder zu viele oder zu wenige Spieler in diesem Replay vorhanden."
+      correct_leader_side: "Es besteht ein Problem, bei dem der Anführer eines Spielers rekrutiert, während der andere an der Reihe ist."
+      correct_leader_location: "Es gibt einen Fehler, bei dem eine nichtführende Person eine Einheit rekrutiert."
+      no_phantom_unit: "Es besteht ein Problem, bei dem ein Bewegungsbefehl von einem Ort aus gegeben wurde, an dem ursprünglich keine Einheit vorhanden war."
+      only_one_phantom: "Es wurden mehrere Bewegungsbefehle von einem Ort aus gegeben, an dem ursprünglich keine Einheit vorhanden war."
+      correct_turn_count: "Die Anzahl der Runden, die von den Rundendaten angegeben wird, stimmt nicht mit der Rundenzählung aus den Aktionsdaten überein."
+      attack_correct_locations: "Es gibt einen Kampf, bei dem die Positionen der Einheiten (Angreifer oder Verteidiger) nicht mit den angegebenen Daten übereinstimmen."
+      attack_correct_units: "Es gibt einen Kampf, bei dem der Name einer Einheit (Angreifer oder Verteidiger) nicht mit den Daten für diesen Kampf übereinstimmt."
+      known_weapons: "Es gibt einen Kampf, bei dem es unmöglich ist, die vom Verteidiger verwendete Waffe abzuleiten."
+      weapon_mismatch: "Es gibt einen Kampf, bei dem der Verteidiger hätte zurückschlagen können, es aber nicht getan hat."
+      attacks_exhausted: "Es gibt einen Kampf, bei dem eine Einheit (Angreifer oder Verteidiger) hätte weiter angreifen können, es aber nicht getan hat."
 
 bugs:
   English:

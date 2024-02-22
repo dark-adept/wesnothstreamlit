@@ -1,7 +1,7 @@
 import yaml
 import streamlit as st
 from pages import Home, Metadata, Turns, Actions, Flags, Bugs
-from util import translate, flip_page, load_replay
+from util import translate, flip_page
 
 
 if "page" not in st.session_state:
@@ -39,18 +39,18 @@ content = load_content()
 
 languages = ["English","Italiano","Deutsch"]
 lang_index = languages.index(st.session_state["lang"])
-st.session_state["lang"] = st.sidebar.selectbox(content["translate"][st.session_state["lang"]],options=languages,on_change=translate,key="new_language",index=lang_index)
+st.session_state["lang"] = st.sidebar.selectbox(content["translate"][st.session_state["lang"]],voptions=languages, on_change=translate, key="new_language", index=lang_index)
 
 
 
 if st.session_state["replay_uploaded"]:
     pages = {
             "homepage": Home
-             ,"metadata":Metadata
-             ,"turns":Turns
-             ,"actions":Actions
-             ,"flags":Flags
-             ,"bugs":Bugs
+             ,"metadata": Metadata
+             ,"turns": Turns
+             ,"actions": Actions
+             ,"flags": Flags
+            #  ,"bugs": Bugs
              }
 else:
     pages = {"homepage": Home}
@@ -65,11 +65,11 @@ def grab_page(selected_page,translation):
 
 
 page_index = list(pages.keys()).index(st.session_state["page"])
-selected_page = st.sidebar.selectbox(content["navigator"][st.session_state["lang"]], pages.keys(), format_func=lambda x:content[x][st.session_state["lang"]]["name"],on_change=flip_page,key="new_page",index=page_index)
+selected_page = st.sidebar.selectbox(content["navigator"][st.session_state["lang"]], pages.keys(), format_func=lambda x:content[x][st.session_state["lang"]]["name"], on_change=flip_page, key="new_page", index=page_index)
 
 
 
 
 
-current_page = grab_page(pages[selected_page],content)["f1"]
+current_page = grab_page(pages[selected_page], content)["f1"]
 current_page.render_frame(st.session_state["lang"])
