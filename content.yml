@@ -124,6 +124,19 @@ flags:
   English:
     name: "Flags"
     title: "Flags"
+    flag:
+      long_enough: "Long Enough"
+      two_players: "Two Players"
+      correct_leader_side: "Leader - Correct Side"
+      correct_leader_location: "Leader - Correct Location"
+      no_phantom_unit: "No Phantom Movement"
+      correct_turn_count: "Correct Turn Count"
+      only_one_phantom: "Only One Phantom Movement"
+      attack_correct_locations: "Combat - Correct Locations"
+      attack_correct_units: "Combat - Correct Units"
+      known_weapons: "Combat - Known Weapons"
+      weapon_mismatch: "Combat - Weapons Match"
+      attacks_exhausted: "Combat - Attacks Exhausted"
     correct:
       long_enough: "There must be more than 4 total turns (2 per player)."
       two_players: "There must be exactly 2 players in a ladder match."
@@ -153,6 +166,19 @@ flags:
   Italiano:
     name: "Errori"
     title: "Errori"
+    flag:
+      long_enough: "Long Enough"
+      two_players: "Two Players"
+      correct_leader_side: "Leader - Correct Side"
+      correct_leader_location: "Leader - Correct Location"
+      no_phantom_unit: "No Phantom Movement"
+      correct_turn_count: "Correct Turn Count"
+      only_one_phantom: "Only One Phantom Movement"
+      attack_correct_locations: "Combat - Correct Locations"
+      attack_correct_units: "Combat - Correct Units"
+      known_weapons: "Combat - Known Weapons"
+      weapon_mismatch: "Combat - Weapons Match"
+      attacks_exhausted: "Combat - Attacks Exhausted"
     correct:
       long_enough: "Deve esserci più di 4 turni totali (2 per giocatore)."
       two_players: "Nella partita competitiva deve esserci esattamente 2 giocatori."
@@ -182,6 +208,19 @@ flags:
   Deutsch:
     name: "Flags"
     title: "Flags"
+    flag:
+      long_enough: "Long Enough"
+      two_players: "Two Players"
+      correct_leader_side: "Leader - Correct Side"
+      correct_leader_location: "Leader - Correct Location"
+      no_phantom_unit: "No Phantom Movement"
+      correct_turn_count: "Correct Turn Count"
+      only_one_phantom: "Only One Phantom Movement"
+      attack_correct_locations: "Combat - Correct Locations"
+      attack_correct_units: "Combat - Correct Units"
+      known_weapons: "Combat - Known Weapons"
+      weapon_mismatch: "Combat - Weapons Match"
+      attacks_exhausted: "Combat - Attacks Exhausted"
     correct:
       long_enough: "Es müssen mehr als 4 Gesamtzüge (2 pro Spieler) sein."
       two_players: "In einem Leitermatch müssen genau 2 Spieler sein."

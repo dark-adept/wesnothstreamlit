@@ -257,7 +257,7 @@ class Flags(Page):
 
 
         for flag,b in flags.items():
-            st.markdown(f'<p style="color:{"#13a113" if b else "#cc2118"};text-align: center;font-size:24px;">{flag.replace("_"," ").title()}</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="color:{"#13a113" if b else "#cc2118"};text-align: center;font-size:24px;">{translation["flag"][flag]}</p>', unsafe_allow_html=True)
             st.write(translation["correct" if b else "incorrect"][flag])
 
 
