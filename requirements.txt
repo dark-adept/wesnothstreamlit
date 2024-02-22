@@ -1,4 +1,4 @@
-yaml
+PyYAML
 io
 numpy
 pandas
