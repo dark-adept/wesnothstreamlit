@@ -1,0 +1,7 @@
+yaml
+io
+numpy
+pandas
+matplotlib
+seaborn
+wesnothanalytics
