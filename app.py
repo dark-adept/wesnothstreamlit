@@ -21,7 +21,8 @@ if "filter1" not in st.session_state:
     st.session_state["filter3"] = ["attack","move","recruit","resurrect","level"]
     st.session_state["filter4"] = False
 
-# hi
+
+st.write("This is a SECRETS test:", st.secrets["SECRET"])
 
 # @st.cache
 def load_content():
