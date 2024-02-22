@@ -1,5 +1,5 @@
-PyYAML==6.0.1
-io
+PyYAML
+Python-IO
 numpy
 pandas
 matplotlib
