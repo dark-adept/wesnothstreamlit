@@ -39,7 +39,7 @@ content = load_content()
 
 languages = ["English","Italiano","Deutsch"]
 lang_index = languages.index(st.session_state["lang"])
-st.session_state["lang"] = st.sidebar.selectbox(content["translate"][st.session_state["lang"]],voptions=languages, on_change=translate, key="new_language", index=lang_index)
+st.session_state["lang"] = st.sidebar.selectbox(content["translate"][st.session_state["lang"]], options=languages, on_change=translate, key="new_language", index=lang_index)
 
 
 
