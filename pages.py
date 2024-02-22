@@ -207,7 +207,8 @@ class Actions(Page):
 
 
 
-        df = pd.DataFrame(st.session_state["replay_data"]["actions"]).fillna("")
+        df = pd.DataFrame(st.session_state["replay_data"]["actions"])
+        df[["combat_string","combat_ids"]].fillna("", inplace=True)
 
 
         if st.session_state["filter1"]=="all":
@@ -219,14 +220,13 @@ class Actions(Page):
         index2 = list(translation["sidebar-filter2-options"].keys()).index(st.session_state["filter2"])
         st.session_state["filter2"] = st.sidebar.selectbox(translation["sidebar-filter2-text"], translation["sidebar-filter2-options"].keys(), format_func=lambda x:translation["sidebar-filter2-options"][x],on_change=apply_filter2,key="new_filter2",index=index2) 
 
-        index3 = list(translation["sidebar-filter3-options"].keys()).index(st.session_state["filter3"])
-        st.session_state["filter3"] = st.sidebar.selectbox(translation["sidebar-filter3-text"], translation["sidebar-filter3-options"].keys(), format_func=lambda x:translation["sidebar-filter3-options"][x],on_change=apply_filter3,key="new_filter3",index=index3) 
+
+
+        st.sidebar.multiselect(label="Actions", options=["attack","move","recruit","resurrect","level"], default=st.session_state["filter3"], on_change=apply_filter3, key="new_filter3")
 
         new_filter4 = st.sidebar.checkbox(translation["sidebar-filter4-text"], on_change=apply_filter4, key="new_filter4")
 
-
-
-        visible_df = df[(df.turn.between(*st.session_state["filter1"]))&((df.side.astype(str)==st.session_state["filter2"])|(st.session_state["filter2"]=="both"))&((df.action==st.session_state["filter3"])|(st.session_state["filter3"]=="all"))&(((df.unit=="PHANTOM")|(df.combat_string=="PHANTOM"))|(not st.session_state["filter4"]))]
+        visible_df = df[(df.turn.between(*st.session_state["filter1"]))&((df.side.astype(str)==st.session_state["filter2"])|(st.session_state["filter2"]=="both"))&(df.action.isin(st.session_state["filter3"]))&(((df.unit=="PHANTOM")|(df.combat_string=="PHANTOM"))|(not st.session_state["filter4"]))]
 
         st.table(visible_df)
 
@@ -252,9 +252,6 @@ class Flags(Page):
 
     def render_content(self,translation,lang):
 
-
-        # index1 = list(translation["sidebar-filter1-options"].keys()).index(st.session_state["filter1"])
-        # st.session_state["filter1"] = st.sidebar.selectbox(translation["sidebar-filter1-text"], translation["sidebar-filter1-options"].keys(), format_func=lambda x:translation["sidebar-filter1-options"][x],on_change=apply_filter1,key="new_filter1",index=index1) 
 
         flags = st.session_state["replay_data"]["flags"]
 

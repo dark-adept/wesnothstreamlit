@@ -18,7 +18,7 @@ if "replay_uploaded" not in st.session_state:
 if "filter1" not in st.session_state:
     st.session_state["filter1"] = "all"
     st.session_state["filter2"] = "both"
-    st.session_state["filter3"] = "all"
+    st.session_state["filter3"] = ["attack","move","recruit","resurrect","level"]
     st.session_state["filter4"] = False
 
 # hi
