@@ -93,7 +93,7 @@ class Home(Page):
                 st.session_state["replay_uploaded"] = None
                 st.session_state["replay_name"] = None
                 st.session_state["replay_data"] = None
-                st.write(e)
+                # st.write(e)
 
 
         if st.session_state["replay_name"]:
