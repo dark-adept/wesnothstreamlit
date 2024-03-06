@@ -4,4 +4,4 @@ numpy
 pandas
 matplotlib
 seaborn
-wesnothanalytics
+wesnothanalytics=0.0.4
